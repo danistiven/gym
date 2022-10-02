@@ -1,0 +1,197 @@
+/*logo*/
+.logo{
+    font-size: 3em;
+    padding: 0.8px;
+    font-family: 'Praise', cursive;
+    font-weight: 2000; 
+}
+#clipped-title1 {
+    background: blue no-repeat center center;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-transition: all 2s cubic-bezier(0.42,0,0.58,1);
+    -moz-transition: all 2s cubic-bezier(0.42,0,0.58,1);
+    -o-transition: all 2s cubic-bezier(0.42,0,0.58,1);
+    transition: all 2s cubic-bezier(0.42,0,0.58,1);
+}
+#clipped-title1:hover {
+    background: red no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+.img_log{
+	margin-top: -150px;
+    position: relative;
+    z-index: -500;
+}
+.img_log:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.90);
+    z-index: 1000;
+    top: 0;
+}
+.img_log{
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+}
+/*carrusel*/
+.contenedor{
+    height: 100px;
+    width: 200px;
+    perspective: 1000px;
+    margin: 250px ;
+    transform:scale(.9)rotateX(-10deg);
+    transform-style: preserve-3d; 
+  
+}
+.contenedor .box{
+    animation: rotar 50s infinite linear;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+   transition: 2s;
+  
+}
+.elementos{
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    box-shadow: 0 0 10px #fff;
+}
+:root{
+    --transladacion:translateZ(250px);
+}
+.elementos:nth-child(1){
+    transform: rotateY(0deg) var(--transladacion);
+}
+.elementos:nth-child(2){
+    transform: rotateY(45deg) var(--transladacion);
+}
+.elementos:nth-child(3){
+    transform: rotateY(90deg) var(--transladacion);
+}
+.elementos:nth-child(4){
+    transform: rotateY(135deg) var(--transladacion);
+}
+.elementos:nth-child(5){
+    transform: rotateY(180deg) var(--transladacion);
+}
+.elementos:nth-child(6){
+    transform: rotateY(225deg) var(--transladacion);
+}
+.elementos:nth-child(7){
+    transform: rotateY(270deg) var(--transladacion);
+
+}
+.elementos:nth-child(8){
+    transform: rotateY(315deg) var(--transladacion);
+
+}
+.elementos:nth-child(9){
+    transform: rotateY(360deg) var(--transladacion);
+    
+}
+.elementos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+.elementos img:nth-child(2){
+    transform: rotateY(180deg)
+}
+.imagen2:nth-child(1){
+    animation: rotar2 50s
+}
+.piso{
+    height: 43em;
+    width:43em;
+    transform: rotateX(90deg) translateX(-280px) translateY(40px)translateZ(140px);
+     background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+    border-radius: 50%;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    height: 200px;
+    width: 300px;
+    flex-direction: column;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.titulo p{
+    margin: 0;
+    padding: 5px;
+}
+
+@keyframes rotar{
+   
+    to{
+        transform: rotateY(-360deg) ;
+    }
+}
+.imagenes{
+    height: 200px;
+    width: 150px;
+    transition: 2s
+        ;
+    transform-style: preserve-3d;
+}
+/*carta*/
+  
+  .contenedo {
+    position: relative;
+    float: left;
+    background: gray;
+    border: solid 1px black;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 45px;
+  }
+  
+  .visible {
+    font-size: 3em;
+  }
+  .invisible{
+    position:absolute;
+    color: white;
+  }
+  #uno{
+    opacity:0;
+    top: 100px;
+    color: black;
+  }
+  #dos{
+    opacity:0;
+    top: 300px;
+    color: black;
+  }
+  #tres{
+    top: 350px;
+    opacity:0;
+    text-align: center;
+    padding: 0 20px 0 20px;
+  }
+  
