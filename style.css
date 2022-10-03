@@ -42,118 +42,6 @@
      height: 150px;
      object-fit: cover;
 }
-/*carrusel*/
-.contenedor{
-    height: 100px;
-    width: 200px;
-    perspective: 1000px;
-    margin: 250px ;
-    transform:scale(.9)rotateX(-10deg);
-    transform-style: preserve-3d; 
-  
-}
-.contenedor .box{
-    animation: rotar 50s infinite linear;
-    height: 100%;
-    width: 100%;
-    transform-style: preserve-3d;
-   transition: 2s;
-  
-}
-.elementos{
-    height: 200px;
-    width: 150px;
-    position: absolute;
-    box-shadow: 0 0 10px #fff;
-}
-:root{
-    --transladacion:translateZ(250px);
-}
-.elementos:nth-child(1){
-    transform: rotateY(0deg) var(--transladacion);
-}
-.elementos:nth-child(2){
-    transform: rotateY(45deg) var(--transladacion);
-}
-.elementos:nth-child(3){
-    transform: rotateY(90deg) var(--transladacion);
-}
-.elementos:nth-child(4){
-    transform: rotateY(135deg) var(--transladacion);
-}
-.elementos:nth-child(5){
-    transform: rotateY(180deg) var(--transladacion);
-}
-.elementos:nth-child(6){
-    transform: rotateY(225deg) var(--transladacion);
-}
-.elementos:nth-child(7){
-    transform: rotateY(270deg) var(--transladacion);
-
-}
-.elementos:nth-child(8){
-    transform: rotateY(315deg) var(--transladacion);
-
-}
-.elementos:nth-child(9){
-    transform: rotateY(360deg) var(--transladacion);
-    
-}
-.elementos img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
-    position: absolute;
-    backface-visibility: hidden;
-    
-}
-.elementos img:nth-child(2){
-    transform: rotateY(180deg)
-}
-.imagen2:nth-child(1){
-    animation: rotar2 50s
-}
-.piso{
-    height: 43em;
-    width:43em;
-    transform: rotateX(90deg) translateX(-280px) translateY(40px)translateZ(140px);
-     background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
-    border-radius: 50%;
-    
-}
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titulo{
-    height: 200px;
-    width: 300px;
-    flex-direction: column;
-    color: #fff;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.7em;
-}
-.titulo p{
-    margin: 0;
-    padding: 5px;
-}
-
-@keyframes rotar{
-   
-    to{
-        transform: rotateY(-360deg) ;
-    }
-}
-.imagenes{
-    height: 200px;
-    width: 150px;
-    transition: 2s
-        ;
-    transform-style: preserve-3d;
-}
 /*carta*/
   
   .contenedo {
@@ -193,5 +81,97 @@
     opacity:0;
     text-align: center;
     padding: 0 20px 0 20px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=PT+Sans);
+  
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    position: relative;
+    background-color: #2c3e50;
+    z-index: 7;}
+  
+    li {
+      float: left;
+      width: 25%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .a1 {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      font-size: 18px;
+      z-index: 9;
+    }
+  
+  
+  a.active {
+    background-color: #e74c3c;
+    pointer-events: none;
+  }
+  
+  li.slider {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #e74c3c;
+    z-index: 8;
+    transition: left .4s, background-color .4s;
+  }
+  
+  .menu li:nth-child(1):hover
+  .menu li:nth-child(1):focus,
+  .menu li:nth-child(1):active {
+    & ~ .slider {
+      left: 0;
+      background-color: #3498db;
+    }
+  }
+  
+  
+  .menu li:nth-child(2):hover,
+  .menu li:nth-child(2):focus,
+  .menu li:nth-child(2):active {
+    & ~ .slider {
+      left: 25%;
+      background-color: #9b59b6;
+    }
+  }
+  
+  .menu li:nth-child(3):hover,
+  .menu li:nth-child(3):focus,
+  .menu li:nth-child(3):active {
+    & ~ .slider {
+      left: 50%;
+      background-color: #e67e22;
+    }
+  }
+  
+  .menu li:nth-child(4):hover,
+  .menu li:nth-child(4):focus,
+  .menu li:nth-child(4):active {
+    & ~ .slider {
+      left: 75%;
+      background-color: #16a085;
+    }
   }
   
